@@ -19,4 +19,3 @@ stow --target=$HOME zshrc
 mv ~/.config/nvim ./nvim/.config/
 stow --target=$HOME nvim
 ```
-
