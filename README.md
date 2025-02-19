@@ -16,7 +16,7 @@ stow --target=$HOME zshrc
 
 #### Case 2: dotfile is at `~/.config`
 ```bash
-mv ~/.config/nvim ./nvim/
+mv ~/.config/nvim ./nvim/.config/
 stow --target=$HOME nvim
 ```
 
