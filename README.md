@@ -11,11 +11,11 @@ My linux dotfiles
 #### Case 1: dotfile is at `~`
 ```bash
 mv ~/.zshrc ./zshrc/
-stow --target=$HOME zshrc
+stow -t $HOME --adopt zshrc
 ```
 
 #### Case 2: dotfile is at `~/.config`
 ```bash
 mv ~/.config/nvim ./nvim/.config/
-stow --target=$HOME nvim
+stow -t $HOME --adopt nvim
 ```
