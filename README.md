@@ -10,12 +10,15 @@ My linux dotfiles
 
 #### Case 1: dotfile is at `~`
 ```bash
-mv ~/.zshrc ./zshrc/
+mkdir zshrc
+mv ~/.zshrc ./zshrc
 stow -t $HOME --adopt zshrc
 ```
 
 #### Case 2: dotfile is at `~/.config`
 ```bash
-mv ~/.config/nvim ./nvim/.config/
+mkrdir -p nvim/.config
+mv ~/.config/nvim nvim/.config
 stow -t $HOME --adopt nvim
 ```
+

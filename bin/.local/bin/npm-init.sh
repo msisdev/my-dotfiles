@@ -4,7 +4,7 @@
 
 npm-init() {
   # flag
-  local git_flag=false
+  local git_flag=false  # -g | --git
 
   # short flag
   while getopts "g" opt; do
