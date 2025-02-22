@@ -1,90 +1,84 @@
 {
-  "layer": "top",
-  "spacing": 0,
-  "height": 0,
-
-  "margin-top": 8,
-  "margin-right": 8,
-  "margin-bottom": 0,
-  "margin-left": 8,
-
-  "modules-left": [
-    "sway/workspaces"
-  ],
-
-  "modules-center": [
-    "clock"
-  ],
-
-  "modules-right": [
-    "tray",
-    "cpu_text",
-    "cpu",
-    "memory",
-    "battery",
-    "network",
-    "pulseaudio"
-  ],
-
-  "sway/workspaces": {
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  // "width": 1280, // Waybar width
+  // Choose the order of the modules
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": [],
+  "modules-right": ["pulseaudio", "backlight", "battery", "clock", "tray", "custom/lock", "custom/power"],
+  "hyprland/workspaces": {
     "disable-scroll": true,
-    "all-outputs": true,
-    "tooltip": false
-  },
-
-  "tray": {
-    "spacing": 10,
-    "tooltip": false
-  },
-
-  "clock": {
-    "format": "{:%I:%M %p - %a, %d %b %Y}",
-    "tooltip": false
-  },
-
-  "cpu": {
-    "format": "cpu {usage}%",
-    "interval": 2,
-
-    "states": {
-    "critical": 90
-    }
-  },
-
-  "memory": {
-    "format": "mem {percentage}%",
-    "interval": 2,
-
-    "states": {
-    "critical": 80
-    }
-  },
-
-  "battery": {
-    "format": "bat {capacity}%",
-    "interval": 5,
-    "states": {
-    "warning": 20,
-    "critical": 10
+    "sort-by-name": true,
+    "format": " {icon} ",
+    "format-icons": {
+      "default": "",
     },
-    "tooltip": false
   },
-
-  "network": {
-    "format-wifi" : "wifi {bandwidthDownBits}",
-    "format-ethernet": "enth {bandwidthDownBits}",
-    "format-disconnected" : "no network",
-    "interval": 5,
-    "tooltip": false
+  "tray": {
+      "icon-size": 21,
+      "spacing": 10
   },
-
+  "custom/music": {
+      "format": "  {}",
+      "escape": true,
+      "interval": 5,
+      "tooltip": false,
+      "exec": "playerctl metadata --format='{{ title }}'",
+      "on-click": "playerctl play-pause",
+      "max-length": 50
+  },
+  "clock": {
+      "timezone": "Asia/Dubai",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": " {:%d/%m/%Y}",
+      "format": " {:%H:%M}"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "format-charging": "",
+    "format-plugged": "",
+    "format-alt": "{icon}",
+    "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""]
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-off": "󰂲",
+    "on-click": "blueman-applet",
+    "tooltip-format": "{status}"
+  },
   "pulseaudio": {
-    "scroll-step": 5,
-    "max-volume": 150,
-    "format": "vol {volume}%",
-    "format-bluetooth": "vol {volume}%",
-    "nospacing": 1,
-    "on-click": "pavucontrol",
-    "tooltip": false
+      // "scroll-step": 1, // %, can be a float
+      "format": "{icon} {volume}%",
+      "format-muted": "",
+      "format-icons": {
+          "default": ["", "", " "]
+      },
+      "on-click": "pavucontrol"
+  },
+  "custom/lock": {
+      "tooltip": false,
+      "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
+      "format": "",
+  },
+  "custom/pipewire": {
+    "tooltip": false,
+    "max-length": 6,
+    "signal": 8,
+    "restart-interval": 0,
+    "exec": "$HOME/.config/waybar/pipewire.sh"
+  },
+  "custom/power": {
+      "tooltip": false,
+      "on-click": "wlogout &",
+      "format": "󰐥"
   }
 }

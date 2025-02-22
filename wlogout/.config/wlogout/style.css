@@ -1,0 +1,25 @@
+@import "./rosewater/rosewater.css";
+
+#lock {
+  background-image: url("./rosewater/lock.svg");
+}
+
+#logout {
+  background-image: url("./rosewater/logout.svg");
+}
+
+#suspend {
+  background-image: url("./rosewater/suspend.svg");
+}
+
+#hibernate {
+  background-image: url("./rosewater/hibernate.svg");
+}
+
+#shutdown {
+  background-image: url("./rosewater/shutdown.svg");
+}
+
+#reboot {
+  background-image: url("./rosewater/reboot.svg");
+}

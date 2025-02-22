@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Stow single folder: ./stow.sh kitty
+# Stow all folders: ./stow.sh
+
 source ./stow-folders.sh
 
 echo "⚠️  stow is about to land."
@@ -10,10 +13,13 @@ if [[ "$continue" != "yes" ]]; then
   exit 1
 fi
 
-for folder in "${folders[@]}"; do
+stow_folder() {
+  local folder="$1"
+
   echo "🔗 $folder"
   echo ""
   result=$(stow -v -t "$HOME" "$folder")
+
   if [[ -z "$result" && $? -eq 0 ]]; then
     echo "(no change)"
   elif [[ $? -ne 0 ]]; then
@@ -23,4 +29,15 @@ for folder in "${folders[@]}"; do
   fi
 
   echo ""
-done
+}
+
+if [ $# -gt 0 ]; then
+  # Stow given folder.
+  folder="$1"
+  stow_folder "$folder"
+else
+  # Stow all folders.
+  for folder in "${folders[@]}"; do
+    stow_folder "$folder"
+  done
+fi
