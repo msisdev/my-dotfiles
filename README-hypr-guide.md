@@ -108,6 +108,20 @@ exec-once = systemctl --user start hyprpolkitagent
 	```
 </details>
 
+### 2.4. fcitx5
+0. Install fcitx5 and your language pack.
+1. Edit `hyprland.conf`
+```conf
+env = GTK_IM_MODULE,fcitx5
+env = QT_IM_MODULE,fcitx5
+env = XMODIFIERS=@im,fcitx5
+exec-once = fcitx5-remote
+```
+2. Edit `chrome://flags` in chrome
+```
+Wayland-text-input-v3: Enabled
+```
+
 
 
 
