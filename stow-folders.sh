@@ -9,9 +9,11 @@ folders=(
   "fastfetch"
   "kitty"
   "nvim"
+  "rofi"
   "style"
   "waybar"
   "wlogout"
+  "wofi"
   "xdg-desktop-portal"
   "zshrc"
 )

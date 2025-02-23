@@ -123,6 +123,10 @@ Wayland-text-input-v3: Enabled
 ```
 
 
+### 2.5. sddm
+#### 2.5.1. set default desktop
+[SDDM wiki - Autologin](https://wiki.archlinux.org/title/SDDM#Autologin)
+
 
 
 
