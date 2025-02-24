@@ -4,8 +4,9 @@
   // "width": 1280, // Waybar width
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": [],
-  "modules-right": ["pulseaudio", "backlight", "battery", "clock", "tray", "custom/lock", "custom/power"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "pulseaudio", "battery", "custom/lock", "custom/power"],
+  
   "hyprland/workspaces": {
     "disable-scroll": true,
     "sort-by-name": true,
@@ -14,10 +15,12 @@
       "default": "",
     },
   },
+
   "tray": {
       "icon-size": 21,
       "spacing": 10
   },
+
   "custom/music": {
       "format": "  {}",
       "escape": true,
@@ -27,9 +30,9 @@
       "on-click": "playerctl play-pause",
       "max-length": 50
   },
+
   "clock": {
     "timezone": "Asia/Seoul",
-    // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "tooltip": true,
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "format-alt": " {:%Y-%m-%d %H:%M:%S}",
@@ -56,11 +59,13 @@
       "on-scroll-down": "shift_down"
     }
   },
+
   "backlight": {
     "device": "intel_backlight",
     "format": "{icon}",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
+
   "battery": {
     "states": {
       "warning": 30,
@@ -72,26 +77,30 @@
     "format-alt": "{icon}",
     "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""]
   },
+
   "bluetooth": {
     "format": "󰂯",
     "format-off": "󰂲",
     "on-click": "blueman-applet",
     "tooltip-format": "{status}"
   },
+
   "pulseaudio": {
       // "scroll-step": 1, // %, can be a float
       "format": "{icon} {volume}%",
       "format-muted": "",
       "format-icons": {
-          "default": ["", "", " "]
+          "default": ["󰕿", "󰖀", "󰕾", "󰕾"]
       },
       "on-click": "pavucontrol"
   },
+
   "custom/lock": {
       "tooltip": false,
       "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
       "format": "",
   },
+
   "custom/pipewire": {
     "tooltip": false,
     "max-length": 6,
@@ -99,6 +108,7 @@
     "restart-interval": 0,
     "exec": "$HOME/.config/waybar/pipewire.sh"
   },
+
   "custom/power": {
       "tooltip": false,
       "on-click": "wlogout &",

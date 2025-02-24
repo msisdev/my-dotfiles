@@ -1,3 +1,8 @@
-@import "latte.css";
+@import "frappe.css";
+/* @import "latte.css"; */
 
 /* * { font-family: "GohuFont 14 Nerd Font Mono"; } */
+
+@define-color primary @lavender;
+@define-color secondary @green;
+@define-color accent @red;

@@ -3,9 +3,8 @@
 * {
   /* font-family: Noto Sans; */
   font-family: "GohuFont 14 Nerd Font Mono";
-  color: @text;
+  color: white;
   background: transparent;
-  
 }
 
 #window {
@@ -26,7 +25,8 @@
   border-width: 1px;
   border-color: rgba(255,255,255,0.2);
   margin: 8px;
-  background-image: linear-gradient(to top, rgba(90,90,90,0.6), rgba(255, 255, 255, 0.8));
+  /* background-image: linear-gradient(to top, rgba(90,90,90,0.6), rgba(255, 255, 255, 0.8)); */
+  background-color: rgba(48, 52, 70, 0.40);
   box-shadow: inset 0px -5px 8px rgba(255, 255, 255, 0.4);
 }
 
@@ -51,7 +51,9 @@
   margin: 4px;
   margin-left: 8px;
   margin-right: 8px;
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0.05)0%, rgba(255, 255, 255, 0.15)50%, rgba(255, 255, 255, 0.15)50%);
+  /* background-image: linear-gradient(to bottom, rgba(255,255,255,0.35)0%, rgba(255, 255, 255, 0.35)50%, rgba(255, 255, 255, 0.35)50%); */
+  background-color: rgba(48, 52, 70, 0.40);
+  /* background-color: red; */
 }
 #entry:selected {
   background-color: rgba(0,255,255,0.4);
