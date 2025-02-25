@@ -11,6 +11,7 @@ folders=(
   "nvim"
   "rofi"
   "style"
+  "swappy"
   "waybar"
   "wlogout"
   "wofi"
