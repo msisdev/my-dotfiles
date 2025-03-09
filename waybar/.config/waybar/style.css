@@ -178,7 +178,7 @@ background-color: #ea6962;
 border: 2px solid #303536;
 }
 
-#clock { color: @text; }
+#clock { color: @red; }
 #pulseaudio { color: @peach; }
 #cpu { color: @yellow; }
 #memory { color: @green; }
