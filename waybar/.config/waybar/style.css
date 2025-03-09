@@ -83,8 +83,10 @@ tooltip label {
 }
 
 #battery,
-#network,
 #clock,
+#cpu,
+#memory,
+#network,
 #tray,
 #workspaces,
 #pulseaudio,

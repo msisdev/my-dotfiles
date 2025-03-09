@@ -5,7 +5,7 @@
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["tray", "pulseaudio", "battery", "custom/lock", "custom/power"],
+  "modules-right": ["tray", "pulseaudio", "cpu", "memory", "battery", "custom/lock", "custom/power"],
   
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -83,6 +83,24 @@
     "format-off": "󰂲",
     "on-click": "blueman-applet",
     "tooltip-format": "{status}"
+  },
+
+  "cpu": {
+    "format": "cpu {usage}%",
+    "interval": 2,
+
+    "states": {
+        "critical": 90
+    }
+  },
+
+  "memory": {
+      "format": "mem {percentage}%",
+      "interval": 2,
+
+      "states": {
+          "critical": 80
+      }
   },
 
   "pulseaudio": {
