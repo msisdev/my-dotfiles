@@ -180,5 +180,7 @@ border: 2px solid #303536;
 
 #clock { color: @text; }
 #pulseaudio { color: @peach; }
+#cpu { color: @yellow; }
+#memory { color: @green; }
 #custom-lock { color: @sapphire; }
 #custom-power { color: @lavender; }
