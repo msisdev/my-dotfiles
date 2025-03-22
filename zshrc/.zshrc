@@ -118,3 +118,19 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 if [[ -o interactive ]]; then
   fastfetch
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/msisdev/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/msisdev/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/msisdev/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/msisdev/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
