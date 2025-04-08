@@ -134,3 +134,21 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# gradle
+export PATH=$PATH:/opt/gradle/gradle-8.13/bin
+
+# For Intellij
+[[ -z "$TERM" ]] && export TERM="xterm-256color"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/home/msisdev/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# docker
+alias docker_rmi_dangling='sudo docker rmi $(sudo docker images -qa -f "dangling=true")'
+
+# cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/msisdev/.pulumi/bin
