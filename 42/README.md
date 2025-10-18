@@ -7,3 +7,9 @@
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch/releases)
 - [gh](https://github.com/cli/cli/releases)
 - [rust](https://rust-lang.org/learn/get-started/)
+
+## intra ssh
+```
+ssh-keygen -t ecdsa
+cat ~/.ssh/id_ecdsa.pub
+```
