@@ -1,0 +1,11 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/carbonfox.toml"
+]
+
+[terminal]
+shell.program = "/usr/bin/fish"
+
+[window]
+opacity = 0.9
+

@@ -1,0 +1,28 @@
+# dotato.yaml
+version: v1
+
+# Mode is either file or link.
+mode: file
+
+# Plans are used to select multiple groups. No other purposes.
+#  - There is no reserved plan name.
+#  - Empty plan means all groups.
+plans:
+  all:          # empty plan means all groups
+
+# Groups are used to group files and tag them with path.
+#  - There is no reserved group name nor resolver name.
+#  - You can use multiple resolvers in the same group.
+#  - You can use tilde or env var in a resolver.
+#  - '%FOO%' is not handled. Use '$FOO' or '${FOO}' instead.
+groups:
+  alacritty:
+    nux: "~/.config/alacritty"
+  bg:
+    nux: "~/Pictures/bg"
+  fastfetch:
+    nux: "~/.config/fastfetch"
+  fish:
+    nux: "~/.config/fish"
+  superfile:
+    nux: "~/.config/superfile"
