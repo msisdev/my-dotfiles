@@ -17,12 +17,12 @@ plans:
 #  - '%FOO%' is not handled. Use '$FOO' or '${FOO}' instead.
 groups:
   alacritty:
-    nux: "~/.config/alacritty"
+    "42": "~/.config/alacritty"
   bg:
-    nux: "~/Pictures/bg"
+    "42": "~/Pictures/bg"
   fastfetch:
-    nux: "~/.config/fastfetch"
+    "42": "~/.config/fastfetch"
   fish:
-    nux: "~/.config/fish"
+    "42": "~/.config/fish"
   superfile:
-    nux: "~/.config/superfile"
+    "42": "~/.config/superfile"
