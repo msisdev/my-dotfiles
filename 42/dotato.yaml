@@ -18,6 +18,8 @@ plans:
 groups:
   alacritty:
     "42": "~/.config/alacritty"
+  applications:
+    "42": "~/.local/share/applications"
   bg:
     "42": "~/Pictures/bg"
   fastfetch:

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/home/minseobk/.cargo/bin/alacritty
+Name=Alacritty Terminal
+Comment=A fast, GPU-accelerated terminal emulator
+Icon=Alacritty
+Categories=System;TerminalEmulator;
+StartupNotify=true
+
