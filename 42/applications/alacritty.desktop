@@ -5,7 +5,6 @@ Terminal=false
 Exec=/home/minseobk/.cargo/bin/alacritty
 Name=Alacritty
 Comment=A fast, GPU-accelerated terminal emulator
-Icon=Alacritty
+Icon=/home/minseobk/.local/share/applications/alacritty.svg
 Categories=System;TerminalEmulator;
 StartupNotify=true
-
