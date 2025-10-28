@@ -1,5 +1,10 @@
 # 42
 
+```
+dotato ex p all 42
+dotato im p all 42
+```
+
 ## URLs
 
 - [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md)
@@ -13,3 +18,4 @@
 ssh-keygen -t ecdsa
 cat ~/.ssh/id_ecdsa.pub
 ```
+
