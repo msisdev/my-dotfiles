@@ -19,6 +19,7 @@
     "separator",
     
     "cpu",
+    "gpu",
     "memory",
     "disk",
     
